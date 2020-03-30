@@ -11,7 +11,14 @@ It takes:
 
 The AStarPathFinding.c file also calculate the shortest path between two points.
 It do not now have a option to ignore barriers (black_fields).
-The int main() method is just there to give an example on how to use the function.
+The int main() method is just there to give an example on how to use the function.                                                                                                                                                                                                   
+There is now also a .java file.
+The main() should be seen as an example on how to use the find_shortest_path() function.
+Take care the path returned by the find_shortest_path() function is 
+from        endpoint    to          startpoint (!).
+
+HOPE THIS HELPS
+
 
 
  
