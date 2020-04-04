@@ -15,7 +15,12 @@ It takes:
 _________________________________________________________________________________
 The AStarPathFinding.c file also calculate the shortest path between two points.
 It do not now have a option to ignore barriers (black_fields).
-                                  
+Example on how to use:
+
+    find_shortest_path(start_pos, end_pos, dimension, &fullpath);
+    for (int i=(fullpath.length); i>0; i--){
+        printf("%d\t%d\n", fullpath.array[i][0], fullpath.array[i][1]);
+    }                        
 
 _________________________________________________________________________________
 There is now also a .java file.
