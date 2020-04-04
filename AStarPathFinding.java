@@ -2,29 +2,6 @@ import java.lang.Math;
 
 public class AStarPathFinding {
 
-    public static void main(String[] args){
-        // please see the main() as an example on how to use the find_shortest_path() function
-        int[] start = new int[2];
-        start[0] = 10;
-        start[1] = 10;
-        int[] end = new int[2];
-        end[0] = 20;
-        end[1] = 20;
-        int[] dim = new int[2];
-        dim[0] = 50;
-        dim[1] = 50;
-        int[][] shortest_path;
-
-        shortest_path = find_shortest_path(start, end, dim);
-
-        for (int i=(shortest_path.length - 1); i>=0; --i) {
-            if ((shortest_path[i][0] != 0) || (shortest_path[i][1] != 0)) {
-                System.out.println(Integer.toString(shortest_path[i][0]) + "       " + Integer.toString(shortest_path[i][1]));
-                System.out.println("__ _ _ _ __");
-            }
-        }
-    }
-
     private static int[][] find_shortest_path(int[] start_pos, int[] end_pos, int[] grid_dim){
         // Create cost vectors full of Zeros
         int[][] d_cost = new int[grid_dim[0]][grid_dim[1]];
