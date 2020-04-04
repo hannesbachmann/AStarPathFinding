@@ -112,27 +112,3 @@ int find_shortest_path(int start_pos[], int end_pos[], int grid_dim[], path_t *m
     }
     return 0;
 }
-
-int main(){
-    // this is just an example on how to use the function
-    int dimension[2];
-    dimension[0] = 50;
-    dimension[1] = 50;
-    int start_pos[2];
-    start_pos[0] = 10;
-    start_pos[1] = 10;
-    int end_pos[2];
-    end_pos[0] = 20;
-    end_pos[1] = 20;
-
-    path_t fullpath = {
-        .length = 100,
-    };
-
-    find_shortest_path(start_pos, end_pos, dimension, &fullpath);
-
-    for (int i=(fullpath.length); i>0; i--){
-        printf("%d\t%d\n", fullpath.array[i][0], fullpath.array[i][1]);
-    }
-    return 0;
-}
