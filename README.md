@@ -12,16 +12,25 @@ It takes:
             black_fields      |     [[x1, y1], [x2, y2], ..., [xn, yn]]                                                                
             
             
-
+_________________________________________________________________________________
 The AStarPathFinding.c file also calculate the shortest path between two points.
 It do not now have a option to ignore barriers (black_fields).
-The int main() method is just there to give an example on how to use the function.                                       
+                                  
 
-
+_________________________________________________________________________________
 There is now also a .java file.
-The main() should be seen as an example on how to use the find_shortest_path() function.
 Take care the path returned by the find_shortest_path() function is 
 from        endpoint    to          startpoint (!).
+Example on how to use this:
+
+shortest_path = find_shortest_path(start, end, dim);
+for (int i=(shortest_path.length - 1); i>=0; --i) {
+   if ((shortest_path[i][0] != 0) || (shortest_path[i][1] != 0)) {
+        System.out.println(Integer.toString(shortest_path[i][0]) + "       " + Integer.toString(shortest_path[i][1]));
+        System.out.println("_ _ _ _ _ _ _");
+   }
+}   
+
 
 HOPE THIS HELPS
 
